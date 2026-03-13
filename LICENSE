@@ -1,0 +1,180 @@
+LICENCIA DE USO ACADÉMICO NO COMERCIAL
+CUCEI MART v1.0
+================================================================================
+
+Copyright (c) 2025–2026 Ragknos Demian Fernandez Agraz Rodriguez (NEXCODE)
+Centro Universitario de Ciencias Exactas e Ingenierías (CUCEI)
+Universidad de Guadalajara — Guadalajara, Jalisco, México.
+
+Todos los derechos reservados.
+
+================================================================================
+TÉRMINOS Y CONDICIONES DE USO
+================================================================================
+
+1. DEFINICIONES
+---------------
+
+"Software" se refiere a todo el código fuente, scripts, archivos de configuración,
+consultas SQL, documentación técnica, prototipos visuales y cualquier otro recurso
+contenido en este repositorio bajo la denominación CUCEI MART.
+
+"Titular" se refiere a Ragknos Demian Fernandez Agraz Rodriguez, fundador y
+desarrollador único del proyecto, operando bajo el nombre comercial NEXCODE.
+
+"Usuario" se refiere a cualquier persona o entidad que acceda, descargue, clone,
+estudie o interactúe con cualquier parte del Software.
+
+"Uso Académico" se refiere al estudio, análisis, referencia, aprendizaje y
+evaluación del Software dentro de un contexto educativo sin fines de lucro.
+
+"Uso Comercial" se refiere a cualquier explotación del Software, total o parcial,
+con el propósito de obtener beneficios económicos directos o indirectos.
+
+
+2. PERMISOS OTORGADOS
+---------------------
+
+Sujeto a los términos de esta licencia, se concede al Usuario permiso limitado,
+no exclusivo, intransferible y sin costo para:
+
+  a) Visualizar, leer y estudiar el código fuente con fines académicos y
+     educativos.
+
+  b) Clonar o descargar el repositorio para uso personal de aprendizaje y
+     referencia técnica.
+
+  c) Referenciar o citar el proyecto en trabajos académicos, tesis, reportes
+     escolares o investigaciones, siempre que se acredite correctamente al Titular
+     y al proyecto CUCEI MART / NEXCODE.
+
+  d) Ejecutar el Software localmente en un entorno de desarrollo personal para
+     fines de estudio, sin ponerlo a disposición pública ni comercializarlo.
+
+
+3. RESTRICCIONES
+----------------
+
+Queda estrictamente prohibido, sin autorización previa y por escrito del Titular:
+
+  a) Usar el Software, total o parcialmente, con fines comerciales, incluyendo
+     pero no limitado a: venta, licenciamiento a terceros, prestación de servicios
+     remunerados, o integración en productos o servicios de pago.
+
+  b) Redistribuir, publicar o poner a disposición pública el Software o
+     derivados del mismo en plataformas distintas al repositorio original, sin
+     autorización expresa.
+
+  c) Sublicenciar, ceder o transferir los derechos otorgados por esta licencia
+     a terceros.
+
+  d) Modificar el Software para crear trabajos derivados que sean distribuidos
+     pública o comercialmente, sin el consentimiento escrito del Titular.
+
+  e) Eliminar, ocultar o alterar cualquier aviso de derechos de autor, marcas,
+     atribuciones o la presente licencia del Software.
+
+  f) Representar o implicar que el Software cuenta con el aval oficial de la
+     Universidad de Guadalajara o del CUCEI, salvo que exista convenio formal
+     que así lo establezca.
+
+
+4. PROPIEDAD INTELECTUAL
+------------------------
+
+El nombre comercial "CUCEI MART", el logotipo, la mascota, el diseño visual de
+la interfaz, la arquitectura de base de datos, la documentación técnica y todo
+el código fuente son propiedad intelectual exclusiva del Titular.
+
+El nombre "NEXCODE" y sus variaciones gráficas son marca del Titular "Ragknos Demian Fernandez Agraz Rodriguez" y no podrán
+ser utilizadas sin autorización expresa.
+
+Nada en esta licencia deberá interpretarse como una cesión o transferencia de
+derechos de propiedad intelectual al Usuario.
+
+
+5. CONTEXTO ACADÉMICO
+---------------------
+
+Este Software fue desarrollado originalmente como proyecto académico dentro del
+Centro Universitario de Ciencias Exactas e Ingenierías (CUCEI) de la Universidad
+de Guadalajara, con fines formativos, tecnológicos y de emprendimiento estudiantil.
+
+Dicho origen académico no limita los derechos del Titular sobre el Software, ni
+implica que la Universidad de Guadalajara sea co-titular, propietaria o
+responsable del mismo.
+
+
+6. AUSENCIA DE GARANTÍAS
+------------------------
+
+EL SOFTWARE SE PROPORCIONA "TAL COMO ESTÁ" ("AS IS"), SIN GARANTÍA DE NINGÚN
+TIPO, EXPRESA O IMPLÍCITA, INCLUYENDO, PERO NO LIMITADO A, GARANTÍAS DE
+COMERCIALIZACIÓN, ADECUACIÓN PARA UN PROPÓSITO PARTICULAR O NO INFRACCIÓN.
+
+EL TITULAR NO GARANTIZA QUE EL SOFTWARE ESTARÁ LIBRE DE ERRORES, INTERRUPCIONES
+O VULNERABILIDADES DE SEGURIDAD.
+
+
+7. LIMITACIÓN DE RESPONSABILIDAD
+---------------------------------
+
+EN NINGÚN CASO EL TITULAR SERÁ RESPONSABLE POR DAÑOS DIRECTOS, INDIRECTOS,
+INCIDENTALES, ESPECIALES, EJEMPLARES O CONSECUENTES (INCLUYENDO, PERO NO
+LIMITADO A, PÉRDIDA DE DATOS, INTERRUPCIÓN DE NEGOCIO O PÉRDIDAS ECONÓMICAS)
+QUE SURJAN DEL USO O LA INCAPACIDAD DE USO DEL SOFTWARE, INCLUSO SI EL TITULAR
+HA SIDO ADVERTIDO DE LA POSIBILIDAD DE DICHOS DAÑOS.
+
+
+8. SOLICITUDES DE AUTORIZACIÓN
+-------------------------------
+
+Para usos distintos a los expresamente permitidos en esta licencia — incluyendo
+integraciones comerciales, colaboraciones institucionales, licenciamiento o
+cualquier uso que supere el ámbito académico personal — el Usuario deberá
+contactar al Titular:
+
+  Titular:    Ragknos Demian Fernandez Agraz Rodriguez
+  Proyecto:   CUCEI MART — NEXCODE
+  GitHub:     https://github.com/NEXCODEMX
+  Instagram:  https://www.instagram.com/NexCode_MX/
+  YouTube:    https://www.youtube.com/@NexCodeMX
+
+Las solicitudes serán evaluadas caso a caso y podrán requerir la suscripción de
+un acuerdo de licencia independiente.
+
+
+9. LEY APLICABLE
+----------------
+
+Esta licencia se rige e interpreta de conformidad con las leyes vigentes de los
+Estados Unidos Mexicanos, incluyendo la Ley Federal del Derecho de Autor (LFDA),
+la Ley de la Propiedad Industrial y demás disposiciones aplicables.
+
+Cualquier controversia derivada de esta licencia será sometida a la jurisdicción
+de los tribunales competentes de la Ciudad de Guadalajara, Jalisco, México,
+renunciando el Usuario a cualquier otro fuero que pudiera corresponderle.
+
+
+10. VIGENCIA Y MODIFICACIONES
+------------------------------
+
+Esta licencia entra en vigor desde la fecha de publicación del Software y
+permanecerá vigente mientras el Titular mantenga los derechos sobre el mismo.
+
+El Titular se reserva el derecho de modificar los términos de esta licencia en
+versiones futuras. El uso continuado del Software tras la publicación de una
+nueva versión de la licencia implica la aceptación de los nuevos términos.
+
+
+================================================================================
+
+Al acceder, clonar, descargar o utilizar cualquier parte de este repositorio,
+el Usuario declara haber leído, comprendido y aceptado los términos y condiciones
+de la presente Licencia de Uso Académico No Comercial CUCEI MART v1.0.
+
+================================================================================
+
+© 2025–2026 Ragknos Demian Fernandez Agraz Rodriguez — NEXCODE
+CUCEI MART | Centro Universitario de Ciencias Exactas e Ingenierías (CUCEI)
+Universidad de Guadalajara — Guadalajara, Jalisco, México.
