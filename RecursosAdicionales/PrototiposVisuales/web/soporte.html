@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soporte Técnico - CUCEI MART</title>
+    <link rel="stylesheet" href="Shop.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="img/CUCEIMART.jpg" type="image/jpeg">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+         <div class="header-content">
+            <span class="logo-text-elegant">CUCEI MART</span>
+         </div>
+        <nav class="nav-icons">
+                <a href="CUCEIMART.html" class="nav-icon" title="Volver a Inicio">
+                    <i class="fas fa-home"></i>
+                </a>
+                <a href="mapaCUCEI.html" class="nav-icon" title="Iniciar Sesión">
+                    <i class="fas fa-map"></i>
+                </a>
+                <a href="#" class="nav-icon" title="Carrito de Compras">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <a href="acercaDe.html" class="nav-icon" title="Acerca De">
+                    <i class="fas fa-info-circle"></i>
+                </a>
+                <div class="nav-icon palette-trigger" onclick="togglePalette()" title="Cambiar Paleta de Colores">
+                    <i class="fas fa-palette"></i>
+                </div>
+            </nav>
+    </header>
+
+    <button id="chat-btn" aria-label="Abrir chat de MART" title="Chat MART">
+        <img src="CUCEIMARTLOGO.jpg" alt="Logo MART" />
+    </button>
+    <div id="chat-container" aria-hidden="true" role="dialog" aria-modal="true">
+        <div id="chat-header">
+            <img src="CUCEIMARTLOGO.jpg" alt="MART chatbot" class="chatbot-avatar" />
+            <h2>MART</h2>
+            <button id="chat-close" aria-label="Cerrar chat">×</button>
+        </div>
+        <div id="chat-messages" role="log" aria-live="polite" aria-relevant="additions">
+        </div>
+        <div id="chat-options" aria-label="Opciones de respuesta">
+        </div>
+    </div>
+    
+    <div class="palette-popup" id="palettePopup">
+        <h3 class="palette-title">
+            <i class="fas fa-palette"></i> Paletas de Colores
+        </h3>
+        <div class="palette-grid">
+            <div class="palette-option active" data-palette="ocean" onclick="changePalette('ocean')">
+                <div class="palette-preview"></div>
+                <span>Océano</span>
+            </div>
+          <div class="palette-option" data-palette="trust" onclick="changePalette('trust')">
+                <div class="palette-preview"></div>
+                <span>Marino</span>
+            </div>
+            <div class="palette-option" data-palette="forest" onclick="changePalette('forest')">
+                <div class="palette-preview"></div>
+                <span>Bosque</span>
+            </div>
+            <div class="palette-option" data-palette="neon" onclick="changePalette('neon')">
+                <div class="palette-preview"></div>
+                <span>Neón</span>
+            </div>
+            <div class="palette-option" data-palette="dark" onclick="changePalette('dark')">
+                <div class="palette-preview"></div>
+                <span>Oscuro</span>
+            </div>
+            <div class="palette-option" data-palette="royal" onclick="changePalette('royal')">
+                <div class="palette-preview"></div>
+                <span>Violeta</span>
+            </div>
+            <div class="palette-option" data-palette="rosenight" onclick="changePalette('rosenight')">
+                <div class="palette-preview"></div>
+                <span> Rosal</span>
+            </div>
+            <div class="palette-option" data-palette="greenroots" onclick="changePalette('greenroots')">
+                <div class="palette-preview"></div>
+                <span>Eco</span>
+            </div>
+            <div class="palette-option" data-palette="yellow" onclick="changePalette('yellow')">
+                <div class="palette-preview"></div>
+                <span>Ámbar</span>
+            </div>
+            <div class="palette-option" data-palette="red" onclick="changePalette('red')">
+                <div class="palette-preview"></div>
+                <span>Carmesí</span>
+            </div>
+        </div>
+    </div>
+
+    <main class="main-container">
+        <section class="hero-section support-hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Centro de Ayuda y Soporte Técnico</h1>
+                <p class="hero-subtitle">
+                    Estamos aquí para asistirte con cualquier duda, problema o sugerencia.
+                    Tu experiencia en CUCEI Mart es nuestra prioridad.
+                </p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title-gradient">Formas de Contacto Directo</h2>
+            <p class="section-description-centered">Elige el método que mejor se adapte a tu necesidad para que nuestro equipo pueda asistirte de manera eficiente.</p>
+            
+            <div class="contact-grid">
+                <div class="card contact-card">
+                    <div class="card-icon-wrapper">
+                        <i class="fas fa-envelope contact-icon"></i>
+                    </div>
+                    <h3>Correo Electrónico</h3>
+                    <p>Envíanos tus consultas detalladas, reportes de errores o sugerencias que requieran una descripción extensa. Nos esforzamos por responder a la brevedad.</p>
+                    <a href="mailto:nexcodemx@gmail.com?subject=Consulta%20desde%20página%20de%20Soporte%20CUCEI%20Mart&body=Hola%20equipo%20de%20CUCEI%20Mart%2C%0A%0AMi%20nombre%20es%20%5BTu%20Nombre%5D%20y%20mi%20consulta%20es%20la%20siguiente%3A%0A%0A%5BAquí%20describe%20tu%20problema%20o%20consulta%20con%20el%20mayor%20detalle%20posible%2C%20incluyendo%20pasos%20para%20reproducirlo%20si%20es%20un%20error%5D%0A%0AGracias%20por%20su%20atención.%0A%0ASaludos%20cordiales." class="btn btn-primary">
+                        Enviar Email
+                    </a>
+                    <span class="detail-text">nexcodemx@gmail.com</span>
+                </div>
+
+                <div class="card contact-card">
+                    <div class="card-icon-wrapper">
+                        <i class="fab fa-whatsapp contact-icon"></i>
+                    </div>
+                    <h3>WhatsApp (Llamada/Mensaje)</h3>
+                    <p>Ideal para consultas rápidas, temas de publicidad o desarrollo web para tu emprendimiento. Contáctanos directamente para una atención ágil.</p>
+                    <a href="https://wa.me/523343408028?text=Hola%20NEXCODE%2C%20necesito%20asistencia%20desde%20la%20página%20de%20Soporte%20de%20CUCEI%20Mart." target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        Enviar WhatsApp
+                    </a>
+                    <span class="detail-text">+52 3343408028</span>
+                </div>
+
+                <div class="card contact-card">
+                    <div class="card-icon-wrapper">
+                        <i class="fas fa-share-alt contact-icon"></i>
+                    </div>
+                    <h3>Nuestros Canales Digitales</h3>
+                    <p>Explora más sobre NEXCODE y mantente al tanto de nuestras novedades y recursos en línea a través de nuestras redes sociales.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/NexCode_MX/" target="_blank" rel="noopener noreferrer" title="Instagram de NEXCODE"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/NEXCODEMX" target="_blank" rel="noopener noreferrer" title="GitHub de NEXCODE"><i class="fab fa-github"></i></a>
+                        <a href="https://www.youtube.com/@NexCodeMX" target="_blank" rel="noopener noreferrer" title="YouTube de NEXCODE"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title-gradient">Reportar un Incidente o Enviar Sugerencia</h2>
+            <p class="section-description-centered">Tu colaboración es fundamental para mantener la calidad y seguridad de nuestra plataforma. Selecciona el tipo de reporte que deseas realizar.</p>
+            
+            <div class="report-options-grid">
+                <a href="mailto:nexcodemx@gmail.com?subject=Reporte%20de%20Emprendimiento%20CUCEI%20Mart&body=Hola%20equipo%20de%20CUCEI%20Mart%2C%0A%0AMe%20dirijo%20a%20ustedes%20para%20reportar%20un%20incidente%20relacionado%20con%20el%20siguiente%20emprendimiento%3A%0A%0ANombre%20del%20emprendimiento%3A%20%5BAquí%20nombre%20o%20descripción%5D%0AMotivo%20del%20reporte%3A%20%5BAquí%20describe%20el%20motivo%20con%20detalle%5D%0AFecha%20o%20contexto%20del%20incidente%3A%20%5BAquí%20fecha%2Fhora%20si%20aplica%5D%0A%0AEn%20espera%20de%20su%20pronta%20atención%20para%20mantener%20la%20calidad%20de%20la%20plataforma%2C%0A%0ASaludos%20cordiales%2C%0A%5BTu%20Nombre%5D" class="btn card-btn-secondary">
+                    <i class="fas fa-exclamation-triangle"></i> Reportar Emprendimiento
+                </a>
+                <a href="mailto:nexcodemx@gmail.com?subject=Reporte%20de%20Bug%2FErro%20en%20CUCEI%20Mart&body=Hola%20equipo%20de%20CUCEI%20Mart%2C%0A%0AEncontré%20un%20bug%20%2F%20error%20en%20la%20plataforma.%0A%0ADescripción%20del%20problema%3A%20%5BAquí%20describe%20el%20bug%20claramente%5D%0APasos%20para%20reproducir%3A%0A1.%20%5BPaso%201%5D%0A2.%20%5BPaso%202%5D%0A3.%20%5BPaso%203%5D%0AComportamiento%20esperado%3A%20%5BAquí%20lo%20que%20debería%20suceder%5D%0AComportamiento%20actual%3A%20%5BAquí%20lo%20que%20realmente%20sucede%5D%0A%0AGracias%20por%20su%20atención%20para%20resolverlo%2C%0A%0ASaludos%20cordiales%2C%0A%5BTu%20Nombre%5D" class="btn card-btn-secondary">
+                    <i class="fas fa-bug"></i> Reportar Bug/Error
+                </a>
+                <a href="mailto:nexcodemx@gmail.com?subject=Sugerencia%20para%20CUCEI%20Mart&body=Hola%20equipo%20de%20CUCEI%20Mart%2C%0A%0AMe%20gustaría%20compartir%20la%20siguiente%20sugerencia%20%2F%20idea%20para%20mejorar%20la%20plataforma%3A%0A%0A%5BAquí%20describe%20tu%20sugerencia%20con%20detalle%5D%0A%0ACreo%20que%20esto%20podría%20beneficiar%20a%20%5BAquí%20menciona%20a%20quién%20beneficiaría%2C%20ej.%20usuarios%2C%20emprendedores%5D%0A%0AGracias%20por%20considerarla%2C%0A%0ASaludos%20cordiales%2C%0A%5BTu%20Nombre%5D" class="btn card-btn-secondary">
+                    <i class="fas fa-lightbulb"></i> Enviar Sugerencia
+                </a>
+            </div>
+        </section>
+
+        <section class="content-section faq-section">
+            <h2 class="section-title-gradient">Preguntas Frecuentes (FAQ)</h2>
+            <p class="section-description-centered">Aquí encontrarás respuestas a las preguntas más comunes sobre CUCEI Mart y su funcionamiento.</p>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">¿Qué es CUCEI Mart?</button>
+                    <div class="faq-answer">
+                        <p>CUCEI Mart es una plataforma innovadora creada por NEXCODE para la comunidad universitaria del CUCEI. Su objetivo principal es conectar de manera profesional y eficiente a estudiantes, profesores y personal con los diversos emprendimientos y servicios ofrecidos por la propia comunidad universitaria. Buscamos facilitar la búsqueda de productos y servicios y fomentar el comercio local dentro de la universidad.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">¿Cómo puedo registrar mi negocio en CUCEI Mart?</button>
+                    <div class="faq-answer">
+                        <p>Registrar tu emprendimiento en CUCEI Mart es completamente gratuito. Es indispensable que tu negocio ya cuente con una página web activa. Si no dispones de una, nuestro equipo de NEXCODE puede desarrollar una solución profesional a tu medida. Una vez tengas tu sitio web, puedes contactarnos a través de la sección "Soy emprendedor/quiero vender" en nuestro chatbot o enviando un correo a nexcodemx@gmail.com para iniciar el proceso de registro.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">¿Tiene algún costo aparecer en CUCEI Mart?</button>
+                    <div class="faq-answer">
+                        <p>Aparecer en el buscador principal de CUCEI Mart es totalmente gratuito para todos los emprendedores de la comunidad CUCEI, siempre y cuando cumplan con el requisito de tener una página web. Ofrecemos opciones de publicidad destacada (banners en la página principal) que sí tienen un costo asociado, diseñadas para dar mayor visibilidad a tu negocio. Puedes consultar los detalles contactándonos vía WhatsApp para información sobre publicidad.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">¿Qué servicios ofrece NEXCODE?</button>
+                    <div class="faq-answer">
+                        <p>NEXCODE es el equipo desarrollador de CUCEI Mart y nos especializamos en potenciar la presencia digital de emprendedores y empresas. Ofrecemos servicios profesionales de desarrollo y diseño de páginas web personalizadas, así como cursos en línea para el desarrollo de habilidades tecnológicas y de emprendimiento. Nuestro objetivo es ayudarte a llevar tu proyecto al siguiente nivel.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">¿Cómo puedo reportar un problema o enviar una sugerencia?</button>
+                    <div class="faq-answer">
+                        <p>Valoramos mucho tu feedback. Puedes reportar bugs, errores, problemas con algún emprendimiento o enviar sugerencias de mejora a través de la sección "Necesito soporte/ayuda" y luego "Reportar un incidente" en nuestro chatbot. También puedes enviar un correo electrónico directamente a nexcodemx@gmail.com con los detalles de tu reporte o sugerencia.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </main>
+
+    <footer class="footer">
+        <div class="footer-logo-container">
+            <div class="footer-line"></div>
+            <div class="footer-logo">
+                <img src="img/CUCEI.png" alt="Logo CUCEI" class="footer-img">
+            </div>
+            <div class="footer-line"></div>
+        </div>
+        <p>© 2025 CUCEI Mart - Todos los derechos reservados.</p>
+    </footer>
+    <script src="Shop.js"></script>
+</body>
+</html>

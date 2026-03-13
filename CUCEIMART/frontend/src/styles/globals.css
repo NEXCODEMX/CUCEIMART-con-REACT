@@ -1,0 +1,253 @@
+/* src/styles/globals.css */
+/* CUCEI MART — Estilos Globales | NEXCODE */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #F4F5F7;
+    color: #172B4D;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    line-height: 1.15;
+    color: #172B4D;
+  }
+
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: #EBECF0; }
+  ::-webkit-scrollbar-thumb { background: #97A0AF; border-radius: 99px; }
+  ::-webkit-scrollbar-thumb:hover { background: #0052CC; }
+
+  ::selection { background: #0052CC22; color: #003380; }
+}
+
+@layer components {
+
+  /* ─── BOTONES ─────────────────────────────────────────────────── */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3
+           bg-primary text-white font-semibold rounded-xl
+           transition-all duration-200 cursor-pointer select-none
+           hover:bg-primary-dark hover:shadow-hover active:scale-95
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3
+           bg-white text-primary font-semibold rounded-xl border-2 border-primary
+           transition-all duration-200 cursor-pointer select-none
+           hover:bg-primary hover:text-white active:scale-95;
+  }
+
+  .btn-accent {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3
+           bg-accent text-white font-semibold rounded-xl
+           transition-all duration-200 cursor-pointer select-none
+           hover:bg-accent-dark hover:shadow-hover active:scale-95;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2
+           bg-transparent text-text-muted font-medium rounded-lg
+           transition-all duration-200 cursor-pointer
+           hover:bg-surface-dark hover:text-text;
+  }
+
+  .btn-icon {
+    @apply inline-flex items-center justify-center w-10 h-10 rounded-xl
+           bg-surface-dark text-text-muted transition-all duration-200
+           hover:bg-primary hover:text-white cursor-pointer;
+  }
+
+  /* ─── INPUTS ──────────────────────────────────────────────────── */
+  .input-field {
+    @apply w-full px-4 py-3 bg-white border-2 border-surface-dark rounded-xl
+           text-text placeholder-text-subtle font-body text-sm
+           transition-all duration-200 outline-none
+           focus:border-primary focus:shadow-glow
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .input-label {
+    @apply block text-sm font-semibold text-text mb-1.5;
+  }
+
+  .input-error {
+    @apply text-xs text-accent mt-1 flex items-center gap-1;
+  }
+
+  /* ─── CARDS ───────────────────────────────────────────────────── */
+  .card {
+    @apply bg-white rounded-xl2 shadow-card border border-surface-dark
+           transition-all duration-300;
+  }
+
+  .card-hover {
+    @apply card hover:shadow-hover hover:-translate-y-1 cursor-pointer;
+  }
+
+  /* ─── BADGES ──────────────────────────────────────────────────── */
+  .badge {
+    @apply inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold;
+  }
+
+  .badge-primary { @apply badge bg-primary/10 text-primary; }
+  .badge-accent  { @apply badge bg-accent/10 text-accent; }
+  .badge-gold    { @apply badge bg-gold/15 text-gold-dark; }
+  .badge-green   { @apply badge bg-cucei-green/10 text-cucei-green; }
+  .badge-gray    { @apply badge bg-surface-dark text-text-muted; }
+
+  /* ─── ESTRELLAS ───────────────────────────────────────────────── */
+  .star-filled  { @apply text-gold; }
+  .star-empty   { @apply text-surface-dark; }
+
+  /* ─── GRADIENTS CUCEI ─────────────────────────────────────────── */
+  .gradient-cucei {
+    background: linear-gradient(135deg, #0052CC 0%, #003FA5 50%, #003380 100%);
+  }
+
+  .gradient-accent {
+    background: linear-gradient(135deg, #FF5630 0%, #FF7452 100%);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #0052CC, #2684FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* ─── SHIMMER SKELETON ────────────────────────────────────────── */
+  .skeleton {
+    @apply bg-gradient-to-r from-surface-dark via-white to-surface-dark
+           animate-shimmer rounded-lg;
+    background-size: 200% 100%;
+  }
+
+  /* ─── CATEGORÍAS CHIPS ────────────────────────────────────────── */
+  .category-chip {
+    @apply inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium
+           border-2 border-surface-dark bg-white text-text-muted
+           cursor-pointer transition-all duration-200 whitespace-nowrap select-none
+           hover:border-primary hover:text-primary hover:bg-primary/5;
+  }
+
+  .category-chip.active {
+    @apply border-primary bg-primary text-white shadow-hover;
+  }
+
+  /* ─── LAYOUT ──────────────────────────────────────────────────── */
+  .page-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-title {
+    @apply text-2xl sm:text-3xl font-heading font-bold text-text;
+  }
+
+  /* ─── ANIMATIONS ──────────────────────────────────────────────── */
+  .animate-fade-up {
+    animation: fadeUp 0.5s ease forwards;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateX(-24px); }
+    to   { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes shimmer {
+    0%   { background-position: -200% 0; }
+    100% { background-position:  200% 0; }
+  }
+
+  /* ─── NAV ─────────────────────────────────────────────────────── */
+  .nav-link {
+    @apply relative text-sm font-medium text-text-muted transition-colors duration-200
+           hover:text-primary px-1 py-0.5;
+  }
+
+  .nav-link.active {
+    @apply text-primary;
+  }
+
+  .nav-link.active::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-0.5 bg-primary rounded-full;
+  }
+
+  /* ─── SEARCH BOX ──────────────────────────────────────────────── */
+  .search-hero {
+    @apply relative flex items-center bg-white rounded-2xl shadow-card border-2 border-surface-dark
+           transition-all duration-200 focus-within:border-primary focus-within:shadow-hover;
+  }
+
+  /* ─── STAR RATING ─────────────────────────────────────────────── */
+  .star-interactive {
+    @apply text-2xl cursor-pointer transition-all duration-150;
+  }
+
+  .star-interactive:hover,
+  .star-interactive.filled { @apply text-gold scale-110; }
+  .star-interactive:not(.filled) { @apply text-surface-dark; }
+
+  /* ─── MEMBRESIA BADGE ─────────────────────────────────────────── */
+  .membresia-destacado { @apply badge bg-gold/20 text-gold-dark border border-gold/30; }
+  .membresia-premium   { @apply badge bg-purple-100 text-purple-700 border border-purple-200; }
+  .membresia-estandar  { @apply badge bg-primary/10 text-primary border border-primary/20; }
+  .membresia-basico    { @apply badge bg-surface-dark text-text-muted; }
+
+  /* ─── MODAL OVERLAY ───────────────────────────────────────────── */
+  .modal-overlay {
+    @apply fixed inset-0 z-50 flex items-center justify-center p-4
+           bg-text/50 backdrop-blur-sm;
+    animation: fadeIn 0.2s ease forwards;
+  }
+
+  .modal-box {
+    @apply bg-white rounded-xl3 shadow-2xl w-full max-w-md max-h-[90vh] overflow-y-auto;
+    animation: fadeUp 0.3s ease forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  /* ─── NOTIFICATION TOAST ──────────────────────────────────────── */
+  .toast-success { @apply bg-cucei-green text-white rounded-xl shadow-card font-body text-sm; }
+  .toast-error   { @apply bg-accent text-white rounded-xl shadow-card font-body text-sm; }
+
+  /* ─── HERO SECTION ────────────────────────────────────────────── */
+  .hero-pattern {
+    background-image:
+      radial-gradient(circle at 20% 50%, rgba(0,82,204,0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(255,86,48,0.06) 0%, transparent 40%),
+      radial-gradient(circle at 60% 80%, rgba(255,171,0,0.06) 0%, transparent 40%);
+  }
+
+  /* ─── EMPRENDEDOR CARD BADGE ──────────────────────────────────── */
+  .emp-rank-badge {
+    @apply absolute -top-2 -right-2 w-8 h-8 rounded-full flex items-center justify-center
+           text-xs font-bold text-white shadow-card z-10;
+  }
+}

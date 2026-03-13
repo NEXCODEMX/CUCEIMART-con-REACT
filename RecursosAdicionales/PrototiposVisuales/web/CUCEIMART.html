@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CUCEI MART - Tu punto de emprendimiento</title>
+    <link rel="stylesheet" href="Shop.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="img/CUCEIMART.jpg" type="image/jpeg">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+   
+    <header class="header">
+         <div class="header-content">
+    <span class="logo-text-elegant">CUCEI MART</span>
+    </div>
+        <div class="header-content">
+        </div>
+        <nav class="nav-icons">
+                <a href="mapaCUCEI.html" class="nav-icon" title="Iniciar Sesión">
+                    <i class="fas fa-map"></i>
+                </a>
+                <a href="#" class="nav-icon" title="Carrito de Compras">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <div class="nav-icon" onclick="toggleNotifications()" title="Notificaciones">
+                    <i class="fas fa-bell"></i>
+                </div>
+                <a href="acercaDe.html" class="nav-icon" title="Acerca De">
+                    <i class="fas fa-info-circle"></i>
+                </a>
+                <a href="soporte.html" class="nav-icon" title="Soporte Técnico">
+                    <i class="fas fa-headset"></i>
+                </a>
+                <div class="nav-icon palette-trigger" onclick="togglePalette()" title="Cambiar Paleta de Colores">
+                    <i class="fas fa-palette"></i>
+                </div>
+            </nav>
+    </header>
+    
+    <button id="chat-btn" aria-label="Abrir chat de MART" title="Chat MART">
+    <img src="CUCEIMARTLOGO.jpg" alt="Logo MART" />
+    </button>
+    <div id="chat-container" aria-hidden="true" role="dialog" aria-modal="true">
+    <div id="chat-header">
+        <img src="CUCEIMARTLOGO.jpg" alt="MART chatbot" class="chatbot-avatar" />
+        <h2>MART</h2>
+        <button id="chat-close" aria-label="Cerrar chat">&times;</button>
+    </div>
+    <div id="chat-messages" role="log" aria-live="polite" aria-relevant="additions">
+    </div>
+    <div id="chat-options" aria-label="Opciones de respuesta">
+    </div>
+    </div>
+    <div class="palette-popup" id="palettePopup">
+        <h3 class="palette-title">
+            <i class="fas fa-palette"></i> Paletas de Colores
+        </h3>
+        <div class="palette-grid">
+            <div class="palette-option active" data-palette="ocean" onclick="changePalette('ocean')">
+                <div class="palette-preview"></div>
+                <span>Océano</span>
+            </div>
+          <div class="palette-option" data-palette="trust" onclick="changePalette('trust')">
+                <div class="palette-preview"></div>
+                <span>Marino</span>
+            </div>
+            <div class="palette-option" data-palette="forest" onclick="changePalette('forest')">
+                <div class="palette-preview"></div>
+                <span>Bosque</span>
+            </div>
+            <div class="palette-option" data-palette="neon" onclick="changePalette('neon')">
+                <div class="palette-preview"></div>
+                <span>Neón</span>
+            </div>
+            <div class="palette-option" data-palette="dark" onclick="changePalette('dark')">
+                <div class="palette-preview"></div>
+                <span>Oscuro</span>
+            </div>
+            <div class="palette-option" data-palette="royal" onclick="changePalette('royal')">
+                <div class="palette-preview"></div>
+                <span>Violeta</span>
+            </div>
+            <div class="palette-option" data-palette="rosenight" onclick="changePalette('rosenight')">
+                <div class="palette-preview"></div>
+                <span> Rosal</span>
+            </div>
+            <div class="palette-option" data-palette="greenroots" onclick="changePalette('greenroots')">
+                <div class="palette-preview"></div>
+                <span>Eco</span>
+            </div>
+            <div class="palette-option" data-palette="yellow" onclick="changePalette('yellow')">
+                <div class="palette-preview"></div>
+                <span>Ámbar</span>
+            </div>
+            <div class="palette-option" data-palette="red" onclick="changePalette('red')">
+                <div class="palette-preview"></div>
+                <span>Carmesí</span>
+            </div>
+        </div>
+    </div>
+   <main class="main-container">
+        <section class="search-section">
+            <h1 class="search-title">Tu punto de emprendimiento</h1>
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" class="search-input" id="searchInput" 
+                           placeholder="Busca productos, servicios o emprendedores...">
+                </div>
+                <div class="filter-container">
+                    <button class="filter-btn active" data-category="todos">
+                    <i class="fas fa-th-large"></i> Todos
+                </button>
+                <button class="filter-btn" data-category="comida">
+                    <i class="fas fa-utensils"></i> Alimentos
+                </button>
+                <button class="filter-btn" data-category="ropa">
+                    <i class="fas fa-tshirt"></i> Ropa
+                </button>
+                <button class="filter-btn" data-category="accesorios">
+                    <i class="fas fa-gem"></i> Accesorios
+                </button>
+                <button class="filter-btn" data-category="cosmeticos">
+                    <i class="fas fa-magic"></i> Cosméticos
+                </button>
+                <button class="filter-btn" data-category="decoraciones">
+                    <i class="fas fa-palette"></i> Decoraciones
+                </button>
+                <button class="filter-btn" data-category="mascotas">
+                    <i class="fas fa-paw"></i> Mascotas
+                </button>
+                <button class="filter-btn" data-category="vapes">
+                    <i class="fas fa-smoking"></i> Vapes
+                </button>
+                <button class="filter-btn" data-category="videojuegos">
+                    <i class="fas fa-gamepad"></i> Videojuegos
+                </button>
+                <button class="filter-btn" data-category="tecnologia">
+                    <i class="fas fa-laptop"></i> Tecnología
+                </button>
+                <button class="filter-btn" data-category="libros">
+                    <i class="fas fa-book"></i> Libros
+                </button>
+                <button class="filter-btn" data-category="juguetes">
+                    <i class="fas fa-puzzle-piece"></i> Juguetes
+                </button>
+                <button class="filter-btn" data-category="suplementos">
+                    <i class="fas fa-capsules"></i> Suplementos
+                </button>
+                <button class="filter-btn" data-category="regalos">
+                    <i class="fas fa-gift"></i> Regalos
+                </button>
+                <button class="filter-btn" data-category="articulos-de-cocina">
+                    <i class="fas fa-warehouse"></i></i> Artículos de Cocina
+                </button>
+                <button class="filter-btn" data-category="muebles">
+                    <i class="fas fa-couch"></i> Muebles
+                </button>
+                 <button class="filter-btn" data-category="servicios">
+                    <i class="fas fa-tools"></i> Servicios
+                </button>
+                <button class="filter-btn" data-category="otros">
+                    <i class="fas fa-ellipsis-h"></i> Otros
+                </button>
+                </div>
+            </div>
+        </section>
+        <section class="banner-container">
+            <h2 class="banner-title">Emprendedores Destacados</h2>
+            <div class="banner-content" id="bannerContent">
+                <a href="https://nexcodemx.github.io/SanzaArt/SanzaArt.html" class="banner-slide active" target="_blank" rel="noopener noreferrer">
+                    <img src="img/negocio1.jpg" alt="Negocio 1">
+                    <h3>SANZA ART</h3>
+                    <p>Cuadros Personalizados</p>
+                </a>
+                <a href="https://negocio2.com" class="banner-slide" target="_blank" rel="noopener noreferrer">
+                    <img src="img/negocio2.jpg" alt="Negocio 2">
+                    <h3>Negocio 2</h3>
+                    <p>Innovación tecnológica al alcance</p>
+                </a>
+                <a href="https://nexcodemx.github.io/NEXCODE/" class="banner-slide" target="_blank" rel="noopener noreferrer">
+                    <img src="img/Nexcode.jpg" alt="Negocio 10">
+                    <h3>NEXCODE</h3>
+                    <p>Cursos En Linea</p>
+                </a>
+            </div>
+        </section>
+        <section class="businesses-grid" id="businessesGrid">
+        </section>
+    </main>
+    <div class="notification-popup" id="notificationPopup">
+        <h3 style="margin-bottom: 1rem; color: #333;">
+            <i class="fas fa-bell"></i> Notificaciones
+        </h3>
+        <div class="notification-item">
+            <i class="fas fa-store" style="color: #667eea;"></i>
+            <div>
+                <strong>Nuevo emprendimiento</strong><br>
+                <small>NEXCODE ya está disponible</small>
+            </div>
+        </div>
+        <div class="notification-item">
+            <i class="fas fa-tag" style="color: #764ba2;"></i>
+            <div>
+                <strong>Oferta especial</strong><br>
+                <small>20% descuento en NEXCODE</small>
+            </div>
+        </div>
+        <div class="notification-item">
+            <i class="fas fa-star" style="color: #ffd700;"></i>
+            <div>
+                <strong>Emprendedor destacado</strong><br>
+                <small>¡Felicidades a NEXCODE!</small>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-logo-container">
+            <div class="footer-line"></div>
+            <div class="footer-logo">
+                <img src="img/CUCEI.png" alt="Logo CUCEI" class="footer-img">
+            </div>
+            <div class="footer-line"></div>
+        </div>
+        <p>&copy; 2025 CUCEI Mart - Todos los derechos reservados.</p>
+    </footer>
+    <script src="Shop.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+ 

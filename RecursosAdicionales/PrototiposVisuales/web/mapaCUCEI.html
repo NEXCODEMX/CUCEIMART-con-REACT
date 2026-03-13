@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Interactivo CUCEI - CUCEI MART</title>
+    <link rel="stylesheet" href="Shop.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="img/CUCEIMART.jpg" type="image/jpeg">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+         <div class="header-content">
+            <span class="logo-text-elegant">CUCEI MART</span>
+         </div>
+        <nav class="nav-icons">
+                <a href="CUCEIMART.html" class="nav-icon" title="Volver a Inicio">
+                    <i class="fas fa-home"></i>
+                </a>
+                <a href="IniciarSesion.html" class="nav-icon" title="Iniciar Sesión">
+                    <i class="fas fa-user"></i>
+                </a>
+                <a href="#" class="nav-icon" title="Carrito de Compras">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <a href="acercaDe.html" class="nav-icon" title="Acerca De">
+                    <i class="fas fa-info-circle"></i>
+                </a>
+                <a href="soporte.html" class="nav-icon" title="Soporte Técnico">
+                    <i class="fas fa-headset"></i>
+                </a>
+                <div class="nav-icon palette-trigger" onclick="togglePalette()" title="Cambiar Paleta de Colores">
+                    <i class="fas fa-palette"></i>
+                </div>
+            </nav>
+    </header>
+
+    <button id="chat-btn" aria-label="Abrir chat de MART" title="Chat MART">
+        <img src="CUCEIMARTLOGO.jpg" alt="Logo MART" />
+    </button>
+    <div id="chat-container" aria-hidden="true" role="dialog" aria-modal="true">
+        <div id="chat-header">
+            <img src="CUCEIMARTLOGO.jpg" alt="MART chatbot" class="chatbot-avatar" />
+            <h2>MART</h2>
+            <button id="chat-close" aria-label="Cerrar chat">×</button>
+        </div>
+        <div id="chat-messages" role="log" aria-live="polite" aria-relevant="additions">
+        </div>
+        <div id="chat-options" aria-label="Opciones de respuesta">
+        </div>
+    </div>
+    
+    <div class="palette-popup" id="palettePopup">
+        <h3 class="palette-title">
+            <i class="fas fa-palette"></i> Paletas de Colores
+        </h3>
+        <div class="palette-grid">
+            <div class="palette-option active" data-palette="ocean" onclick="changePalette('ocean')">
+                <div class="palette-preview"></div>
+                <span>Océano</span>
+            </div>
+          <div class="palette-option" data-palette="trust" onclick="changePalette('trust')">
+                <div class="palette-preview"></div>
+                <span>Marino</span>
+            </div>
+            <div class="palette-option" data-palette="forest" onclick="changePalette('forest')">
+                <div class="palette-preview"></div>
+                <span>Bosque</span>
+            </div>
+            <div class="palette-option" data-palette="neon" onclick="changePalette('neon')">
+                <div class="palette-preview"></div>
+                <span>Neón</span>
+            </div>
+            <div class="palette-option" data-palette="dark" onclick="changePalette('dark')">
+                <div class="palette-preview"></div>
+                <span>Oscuro</span>
+            </div>
+            <div class="palette-option" data-palette="royal" onclick="changePalette('royal')">
+                <div class="palette-preview"></div>
+                <span>Violeta</span>
+            </div>
+            <div class="palette-option" data-palette="rosenight" onclick="changePalette('rosenight')">
+                <div class="palette-preview"></div>
+                <span> Rosal</span>
+            </div>
+            <div class="palette-option" data-palette="greenroots" onclick="changePalette('greenroots')">
+                <div class="palette-preview"></div>
+                <span>Eco</span>
+            </div>
+            <div class="palette-option" data-palette="yellow" onclick="changePalette('yellow')">
+                <div class="palette-preview"></div>
+                <span>Ámbar</span>
+            </div>
+            <div class="palette-option" data-palette="red" onclick="changePalette('red')">
+                <div class="palette-preview"></div>
+                <span>Carmesí</span>
+            </div>
+        </div>
+    </div>
+
+    <main class="main-container map-page-layout">
+        <section class="hero-section map-hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Explora CUCEI: Negocios en el Mapa</h1>
+                <p class="hero-subtitle">
+                    Descubre los emprendimientos de la comunidad CUCEI ubicados directamente en el campus.
+                </p>
+            </div>
+        </section>
+
+        <section class="content-section map-interactive-section">
+            <h2 class="section-title-gradient">Navegación Interactiva del Campus</h2>
+            <p class="section-description-centered">Utiliza el mapa y los controles para encontrar negocios, edificios y puntos de interés.</p>
+            
+            <div class="map-app-layout">
+                <div class="app-search-header">
+                    <input type="text" class="app-search-box" placeholder="Buscar negocio o edificio..." id="mapSearchInput" aria-label="Buscar negocio o edificio">
+                    <div id="reloj" class="app-time-display"></div>
+                </div>
+
+                <div class="phone-container">
+                    <div class="phone-screen">
+                        <div class="map-viewport" id="mapViewport"> 
+                            <img src="img/MapaCUCEI.jpg" alt="Mapa Oficial del Campus CUCEI" id="main-campus-map" class="main-campus-map">
+                            
+                            <div id="mapPinsContainer" class="map-pins-container">
+                            </div>
+                        </div>
+                        <button class="phone-home-button" id="resetMapButton" title="Volver a la vista principal del mapa"></button>
+                    </div>
+                </div>
+
+                <div class="map-controls-panel">
+                    <button class="control-main-button" id="toggle-view-btn">
+                        <i class="fas fa-eye"></i> Alternar Vista (Mapa/Plantel)
+                    </button>
+                    
+                    <h3 class="panel-heading">Explorar por:</h3>
+                    <div class="control-buttons-group">
+                        <button class="control-button" id="show-buildings-btn">
+                            <i class="fas fa-building"></i> Edificios
+                        </button>
+                        <button class="control-button" id="show-zones-btn">
+                            <i class="fas fa-map-marker-alt"></i> Zonas de Interés
+                        </button>
+                        <button class="control-button" id="show-all-businesses-btn"> <i class="fas fa-store"></i> Todos los Negocios
+                        </button>
+                    </div>
+                    <div id="dynamic-building-buttons" class="control-buttons-group dynamic-group"></div>
+                    <div id="dynamic-zone-buttons" class="control-buttons-group dynamic-group"></div>
+
+                    <h3 class="panel-heading">Filtros de Negocios:</h3>
+                    <div class="control-buttons-group">
+                        <button class="control-button btn-featured" id="filterFeaturedBtn">
+                            <i class="fas fa-star"></i> Ver Solo Destacados
+                        </button>
+                        <button class="control-button btn-primary" id="resetFiltersBtn">
+                            <i class="fas fa-redo"></i> Mostrar Todos
+                        </button>
+                    </div>
+
+                    <h3 class="panel-heading">Navegación Direccional:</h3>
+                    <div class="direction-controls" id="directionControls">
+                        <button class="dir-button" id="up-button"><i class="fas fa-arrow-up"></i></button>
+                        <button class="dir-button" id="left-button"><i class="fas fa-arrow-left"></i></button>
+                        <button class="dir-button" id="down-button"><i class="fas fa-arrow-down"></i></button>
+                        <button class="dir-button" id="right-button"><i class="fas fa-arrow-right"></i></button>
+                    </div>
+
+                    <h3 class="panel-heading">Accesos Rápido:</h3>
+                    <div class="control-buttons-group">
+                        <button class="control-button" onclick="showGoogleMapsExternal()">
+                            <i class="fas fa-globe"></i> Google Maps (Exterior)
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="businessInfoCard" class="card business-info-card" style="display: none;">
+                <button class="close-card-btn" aria-label="Cerrar información del negocio">×</button>
+                <h3 id="infoCardName"></h3>
+                <p id="infoCardCategory" class="info-card-category"></p>
+                <p id="infoCardDescription"></p>
+                <div class="info-card-actions">
+                    <a id="infoCardLink" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Visitar Tienda</a>
+                    <span id="infoCardFeaturedBadge" class="featured-badge" style="display: none;"><i class="fas fa-star"></i> Destacado</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-logo-container">
+            <div class="footer-line"></div>
+            <div class="footer-logo">
+                <img src="img/CUCEI.png" alt="Logo CUCEI" class="footer-img">
+            </div>
+            <div class="footer-line"></div>
+        </div>
+        <p>© 2025 CUCEI Mart - Todos los derechos reservados.</p>
+    </footer>
+     <div id="comingSoonOverlay" class="coming-soon-overlay">
+        <div class="coming-soon-content">
+            <h2 class="coming-soon-title">¡PRÓXIMAMENTE!</h2>
+            <p class="coming-soon-message">Estamos trabajando arduamente para brindarte una experiencia excepcional. ¡Prepárate para descubrir una nueva forma de conectar!</p>
+            <p class="coming-soon-small-text">Sigue nuestras redes para actualizaciones.</p>
+            <div class="coming-soon-social">
+                <a href="https://www.instagram.com/NexCode_MX/" target="_blank" rel="noopener noreferrer" title="Instagram de NEXCODE"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/NEXCODEMX" target="_blank" rel="noopener noreferrer" title="GitHub de NEXCODE"><i class="fab fa-github"></i></a>
+                <a href="https://www.youtube.com/channel/NexCodeMX" target="_blank" rel="noopener noreferrer" title="YouTube de NEXCODE"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+    <script src="Shop.js"></script>
+    <script src="map.js"></script>
+</body>
+</html>
